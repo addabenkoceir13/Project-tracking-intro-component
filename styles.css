@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+:root
+{
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
+
+    --font-size: 18px;
+    /* Headings, Call-to-actions, Navigation */
+    --font-family-1: 'Barlow Condensed', sans-serif;
+    /* Body */
+    --font-family-2: 'Barlow', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 40px auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+.header{
+    padding: 12px 0;
+    line-height: 1.5;
+}
+.header .container .row .logo{
+    font-size: var(--font-size);
+    display: flex;
+    justify-content: space-between;
+}
+.header .container .logo,
+.header .container .nav{
+    padding: 0 15px ;
+}
+
+.header .container .row .nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+.header .container .row .nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+.header .container .row .nav ul li a{
+    display: block;
+    font-size: var(--font-size);
+    font-family: var(--font-family-1);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--Dark-Grayish-Blue);
+}
+.header .container .row .nav ul li:nth-child(5) a{
+    display: block;
+    font-size: var(--font-size);
+    font-family: var(--font-family-1);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--Grayish-Blue);
+}
+.header .container .row .nav ul li a::after{
+    content: '';
+    display: block;
+    position: relative;
+    top: -5px;
+    height: 1px;
+    background-color: var(--Dark-Grayish-Blue);
+    transform: scale(0);
+    transition: all ease-in-out  0.5s;
+}
+.header .container .row .nav ul li a:hover::after{
+    transform: scale(1);
+}
+.nav-toggler{
+    height: 40px;
+    width: 54px;
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    top: -10px;
+    display: none;
+    margin-right: 15px;
+}
+/* .nav-toggler:focus{
+    outline: none;
+    box-shadow: 0 0 15px rgba(200, 192, 192, 0.6);
+} */
+.nav-toggler span{
+    height: 2px;
+    width: 25px;
+    background-color: var(--Dark-Grayish-Blue);
+    display: block;
+    margin: auto ;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.nav-toggler.active span{
+	background-color: transparent;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--Dark-Grayish-Blue);
+	transition: all 0.3s ease;
+}
+.nav-toggler span::before{
+	transform: translateY(-6px);
+}
+.nav-toggler.active span::before{
+	transform: rotate(45deg);
+}
+.nav-toggler span::after{
+	transform: translateY(6px);
+}
+.nav-toggler.active span::after{
+	transform: rotate(135deg);
+}
+
+
+@media(max-width:588px){
+    .nav-toggler{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 45px;
+    }
+    .header .container .row .nav{
+        width: 100%;
+        background-color: transparent;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        max-height: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        visibility: hidden;
+        transform: all 0.5s ease;
+    }
+    .header .container .row .nav.open{
+        visibility: visible;
+    }
+    .header .container .row .nav ul li {
+        display: block;
+        margin: 15px 0;
+    }
+    .header .container .row .nav ul{
+        padding:  12px 15px 20px 0;
+        margin-top: 12px;
+        text-align: center;
+        width: 80%;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    .header .container .row .nav ul li:nth-child(5) {
+        border-top: 1px solid black;
+        padding: 20px 0;
+    }
+}
