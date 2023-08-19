@@ -22,7 +22,12 @@
 body{
     background: #fff;
 }
+.desktop{
 
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100vh; 
+}
 ul {
     list-style: none;
 }
@@ -148,18 +153,90 @@ a {
 .nav-toggler.active span::after{
 	transform: rotate(135deg);
 }
-main .box-z-p .box-z{
+/* Start CSS MAIN  */
+main{
+    max-width: 1170px;
+    margin: 100px auto;
     /* position: relative; */
 }
+/* Start CSS box Z-index */
 main .box-z{
-    width: 750px;
+    width: 950px;
     height: 400px;
     background: var(--Light-Grayish-Blue);
     position: absolute;
-    top: 0;
+    top: 0px;
     right: 0;
     border-bottom-left-radius: 50px;
     z-index: -1;
+}
+/* Start CSS dashboard */
+.wrapper .row{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    position: relative;
+    /* top: 70px; */
+}
+.wrapper .row .powerful{
+    margin-right: 120px;
+}
+.wrapper .row .powerful div{
+    display: flex;
+    align-items: center;
+
+}
+.wrapper .row .powerful div span{
+    background-color: var(--Very-Dark-Blue);
+    padding: 7px 9px;
+    color: #fff;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-family: var(--font-family-2);
+    font-weight: 700;
+    font-size: 12px;
+    
+}
+.wrapper .row .powerful div p{
+    margin: 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: var(--Dark-Grayish-Blue);
+}
+.wrapper .row .powerful h1{
+    color: var(--Very-Dark-Blue);
+    font-family: var(--font-family-1);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 70px;
+}
+.wrapper .row .powerful p{
+    margin: 40px 0;
+    font-size: var(--font-size);
+    color: var(--Dark-Grayish-Blue);
+}
+.wrapper .row .powerful div button {
+    border: none;
+    outline:none !important ;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: hsl(0, 100%, 68%);
+    color: var(--Light-Grayish-Blue);
+    font-family: var(--font-family-1);
+    font-weight: 400;
+    padding: 15px 25px;
+    border-radius: 5px;
+    z-index: 100;
+    transition:.5s ease all;
+
+}
+.wrapper .row .image {
+    /* position: relative; */
+    width: 500px;
+}
+.wrapper .row .image img{
+    width: 800px;
 }
 
 
@@ -194,10 +271,43 @@ main .box-z{
         margin-top: 12px;
         text-align: center;
         width: 80%;
+        z-index: 2;
+        background-color: #fff;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
     .header .container .row .nav ul li:nth-child(5) {
         border-top: 1px solid black;
         padding: 20px 0;
+    }
+    main .box-z{
+        width: 200px;
+    }
+    main .wrapper{
+        padding: 0 15px;
+    }
+    .wrapper .row .powerful{
+        margin: 90px 0 0 0;
+    }
+    .wrapper .row .powerful h1{
+        font-size: 40px;
+    }
+    .wrapper .row .powerful p{
+        margin: 20px 0;
+    }
+    .wrapper .row .powerful div button{
+        font-size: 10px;
+        padding: 8px 12px;
+    }
+    .wrapper .row .powerful div button + p{
+        font-size: 9px;
+    } 
+    .wrapper .row .image {
+        position: relative;
+        right: -50px;
+    }
+    .wrapper .row .image img{
+        width: 650px;
+        /* position: relative; */
+        /* right: -80px ; */
     }
 }
