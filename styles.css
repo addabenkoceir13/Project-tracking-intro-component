@@ -33,6 +33,7 @@ a {
 .container {
     max-width: 1170px;
     margin: 40px auto;
+    z-index: 1;
 }
 .row{
     display: flex;
@@ -146,6 +147,19 @@ a {
 }
 .nav-toggler.active span::after{
 	transform: rotate(135deg);
+}
+main .box-z-p .box-z{
+    /* position: relative; */
+}
+main .box-z{
+    width: 750px;
+    height: 400px;
+    background: var(--Light-Grayish-Blue);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 50px;
+    z-index: -1;
 }
 
 
