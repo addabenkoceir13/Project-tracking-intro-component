@@ -11,4 +11,4 @@ function navToggle() {
     else{
         nav.removeAttribute("style");
     }
-} 
+}

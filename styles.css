@@ -2,11 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 :root
 {
+    /*colors*/
     --Very-Dark-Blue: hsl(230, 29%, 20%);
     --Dark-Grayish-Blue: hsl(230, 11%, 40%);
     --Grayish-Blue: hsl(231, 7%, 65%);
     --Light-Grayish-Blue: hsl(207, 33%, 95%);
-
+    --Red: hsl(0, 100%, 68%);
+    /*fonts*/
     --font-size: 18px;
     /* Headings, Call-to-actions, Navigation */
     --font-family-1: 'Barlow Condensed', sans-serif;
@@ -152,17 +154,91 @@ main .box-z-p .box-z{
     /* position: relative; */
 }
 main .box-z{
-    width: 750px;
-    height: 400px;
+    width: 700px;
+    height: 375px;
     background: var(--Light-Grayish-Blue);
     position: absolute;
     top: 0;
     right: 0;
-    border-bottom-left-radius: 50px;
+    border-bottom-left-radius: 60px;
     z-index: -1;
 }
-
-
+.mains{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#dev{
+    position:fixed;
+    padding-top: 40px;
+    margin-left: 65px;
+    margin-right: -170px;
+    width: 850px;
+    height: 450px;
+}
+#paragraphs{
+    margin-top: 80px;
+    margin-left: 110px;
+}
+#new{
+    font-family: var(--font-family-1);
+    display: inline;
+    border: 0px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 50px;
+    padding: 1px 10px 1px 10px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+#monograph{
+    display: inline;
+    font-family: var(--font-family-1);
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: var(--Grayish-Blue);
+}
+#powerful{
+    padding-top: 10px;
+    font-family: var(--font-family-1);
+    color: var(--Very-Dark-Blue);
+    text-transform: uppercase;
+    font-size: 60px;
+    padding-right: 130px;
+    line-height: 1.0;
+}
+#project{
+    padding-top: 30px;
+    font-family: var(--font-family-2);
+    color:var(--Grayish-Blue);
+    font-size: 18px;
+    margin-right: 300px;
+}
+#btn_1 {
+    cursor: pointer;
+    display: inline;
+    margin-top: 50px;
+    font-family: var(--font-family-1);
+    color: white;
+    text-transform: uppercase;
+    background-color: var(--Red);
+    padding: 10px 0px 10px 0px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 0px;
+}
+#to{
+    display: inline;
+    letter-spacing: 1px;
+    font-family: var(--font-family-1);
+    color: var(--Very-Dark-Blue);
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+/*mobiles*/
 @media(max-width:588px){
     .nav-toggler{
         display: block;
@@ -199,5 +275,44 @@ main .box-z{
     .header .container .row .nav ul li:nth-child(5) {
         border-top: 1px solid black;
         padding: 20px 0;
+    }
+    .mains{
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "contentA"
+            "contentB";
+    }
+    #dev{
+        grid-area: contentA;
+        position:static;
+        padding-top: 20px;
+        margin-left: 45px;
+    }
+    #paragraphs{
+        grid-area: contentB;
+        margin-top: 80px;
+        margin-left: 60px;
+        margin-right: 90px;
+        margin-bottom: 280px;
+    }
+    #btn_1 {
+        display: inline;
+        margin-top: 80px;
+        padding: 10px 0px 10px 0px;
+        width: 250px;
+        border-radius: 5px;
+        font-size: 18px;
+        border: 0px;
+    }
+    #to{
+        display: inline;
+        font-size: 20px;
+    }
+    #project{
+        font-size: 24px;
+        margin-right: 200px;
     }
 }
