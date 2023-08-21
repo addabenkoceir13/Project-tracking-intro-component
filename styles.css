@@ -296,7 +296,7 @@ main .box-z{
         margin-top: 80px;
         margin-left: 60px;
         margin-right: 90px;
-        margin-bottom: 280px;
+        margin-bottom: 200px;
     }
     #btn_1 {
         display: inline;
@@ -314,5 +314,45 @@ main .box-z{
     #project{
         font-size: 24px;
         margin-right: 200px;
+    }
+}
+@media(max-width:442px){
+    #dev{
+        padding-top: 0px;
+        margin-left: 25px;
+        width: 600px;
+        height: 300px;
+    }
+    #paragraphs{
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+    #powerful{
+        font-size: 49px;
+        padding-right: 0px;
+    }
+    #project{
+        font-size: 20px;
+        margin-right: 130px;
+    }
+    #btn_1 {
+        width: 200px;
+    }
+    #to{
+        display: inline;
+        font-size: 18px;
+    }
+}
+@media(max-width:390px){
+    #to{
+        font-size: 15px;
+    }
+}
+@media(max-width:375px){
+    #powerful{
+        font-size: 48px;
+    }
+    #btn_1 {
+        width: 180px;
     }
 }
