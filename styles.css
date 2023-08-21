@@ -234,7 +234,7 @@ main .box-z{
     display: inline;
     letter-spacing: 1px;
     font-family: var(--font-family-1);
-    color: var(--Very-Dark-Blue);
+    color: var(--Grayish-Blue);
     text-transform: uppercase;
     padding-left: 10px;
 }
